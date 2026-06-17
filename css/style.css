@@ -1,0 +1,256 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #333;
+}
+
+.page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+
+.header {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 32px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: 0.05em;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.input-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.char-input {
+  flex: 1;
+  min-width: 120px;
+  padding: 12px 20px;
+  font-size: 1.5rem;
+  text-align: center;
+  border: 2px solid #e8e8f0;
+  border-radius: 12px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.char-input:focus {
+  border-color: #667eea;
+}
+
+.btn {
+  padding: 12px 24px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+  background: #f0f0f5;
+  color: #555;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #667eea;
+  border: 2px solid #667eea;
+}
+
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 0.85rem;
+}
+
+.error-msg {
+  margin-top: 16px;
+  padding: 12px 16px;
+  background: #fff0f0;
+  color: #c0392b;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.loading {
+  margin-top: 24px;
+  text-align: center;
+  color: #888;
+  font-size: 0.95rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.result {
+  margin-top: 32px;
+}
+
+.char-summary {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.main-char {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 160px;
+  background: linear-gradient(180deg, #f0f4ff 0%, #e8eeff 100%);
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  background: #f8f9fc;
+  border-radius: 12px;
+  padding: 12px 28px;
+  min-width: 120px;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #667eea;
+  text-transform: capitalize;
+}
+
+.strokes-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.strokes-header h2 {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.strokes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 16px;
+}
+
+.stroke-item {
+  text-align: center;
+}
+
+.stroke-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  border: 1px solid #e0e0e8;
+  border-radius: 8px;
+  background: #fafafa;
+  overflow: hidden;
+}
+
+.stroke-box svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.stroke-label {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.stroke-export {
+  margin-top: 6px;
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  color: #667eea;
+  background: #f0f4ff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.stroke-export:hover {
+  background: #dde4ff;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 20px;
+  }
+
+  .input-row {
+    flex-direction: column;
+  }
+
+  .char-input,
+  .btn {
+    width: 100%;
+  }
+}

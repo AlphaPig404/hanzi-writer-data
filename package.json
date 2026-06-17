@@ -8,7 +8,8 @@
   "license": "SEE LICENSE IN ARPHICPL.TXT",
   "scripts": {
     "prepublishOnly": "cp -r data/* .",
-    "serve": "http-server"
+    "serve": "http-server -p 8081",
+    "start": "npm run serve"
   },
   "devDependencies": {
     "http-server": "^0.11.1"
